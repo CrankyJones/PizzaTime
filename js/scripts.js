@@ -3,6 +3,10 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
+function Order(){
+  this.pizzas = [];
+}
+
 Pizza.prototype.pizzaPrice = function () {
   let price = 0;
   if (this.size === "Small") {

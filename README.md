@@ -23,7 +23,12 @@ Expect: Pizza().toEqual Pizza{size, [toppings]}
 ### **Test 2**
 Describe: Pizza.prototype.pizzaPrice();   
 Test: Determine price of pizza by checking size and toppings.length   
-Expect pizzaPrice(small, [Pepperoni, Olives]).toEqual "13"   
+Expect pizzaPrice(small, [Pepperoni, Olives]).toEqual "13"
+
+### **Test 3**
+Describe: Order();
+Test: Add multiple pizzas to one object
+Expect Order().toEqual Order{pizza1, pizza2}
 
 ## **Setup/Installation**
 * Clone the repository to your desktop from GitHub

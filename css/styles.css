@@ -7,8 +7,9 @@ linear-gradient(-45deg, orangered 25%, transparent 25%),
 linear-gradient(45deg, transparent 75%,orangered 75%),
 linear-gradient(-45deg, transparent 75%, orangered 75%);
 background-repeat: no-repeat;    
-background-position: fixed bottom right;
+background-position: bottom right;
 }
+
 .jumbotron{
   background-color: lightcyan;
 }
@@ -16,8 +17,8 @@ background-position: fixed bottom right;
 #pizzaForm {
   background-color: lightcyan;
   border-radius: 10%;
-  
-  padding: 5%;
+  margin-bottom: 50px;
+  padding: 10%;
 }
 
 h2{
@@ -55,5 +56,5 @@ h6{
   margin-top: 15%;
   color: black;
   background-color: rgb(211, 211, 211, .95);
-  ;
+  margin-bottom: 50%;
 }

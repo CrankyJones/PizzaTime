@@ -30,6 +30,11 @@ Describe: Order();
 Test: Add multiple pizzas to one object
 Expect Order().toEqual Order{pizza1, pizza2}
 
+### **Test 4**
+Describe: secondPizza();
+Test: Try and get the form to be resubmitted
+Expect secondPizza().to resubmit the filled out form and run the submit function again.
+
 ## **Setup/Installation**
 * Clone the repository to your desktop from GitHub
 * Navigate to the top level of the directory

@@ -1,4 +1,10 @@
 
+
+function secondPizza () {
+  
+}
+
+
 function Order() {
   this.pizzas = {};
   this.totalPrice = 0;
@@ -58,5 +64,6 @@ $(document).ready(function () {
     $(".pizzaCost").text((Math.round(newOrder.totalPrice * 100) / 100).toFixed(2));
     $(".pizzaOrder").show();
     $("#placeOrder").hide();
+    document.getElementById("pizzaForm").reset();
   });
 })

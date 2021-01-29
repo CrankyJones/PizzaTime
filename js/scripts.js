@@ -18,6 +18,9 @@ Pizza.prototype.pizzaPrice = function () {
   return price;
 }
 
+function listToppings() {
+
+}
 
 
 
@@ -25,6 +28,7 @@ $(document).ready(function (){
   $("#pizzaForm").submit(function(event){
     event.preventDefault();
     let toppings = [];
+    let toppingsList = "";
     const size = $("input:radio[name=size]:checked").val();
     $("input:checkbox[name=toppings]:checked").each(function(){
       const item = $(this).val();
@@ -34,10 +38,10 @@ $(document).ready(function (){
     let price = newPizza.pizzaPrice();
     $(".pizzaSize").text(size);
 
-    for( let i=-1; i < toppings.length; i++) {
-      $(".pizzaToppings").text(toppings);
+    for( let i=0; i < toppings.length; i++) {
+      toppingsList += toppings[i] + "   ";
     }
-
+    $(".pizzaToppings").text(toppingsList);
 
     $(".pizzaCost").text(price);
 

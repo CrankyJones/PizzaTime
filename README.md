@@ -22,10 +22,9 @@ Expect: Pizza().toEqual Pizza{size, [toppings]}
 
 
 Test 2
-Describe Pizza.prototype.pizzaPrice();
+Describe: Pizza.prototype.pizzaPrice();
 Test: Determine price of pizza by checking size and toppings.length
 Expect pizzaPrice(small, [Pepperoni, Olives]).toEqual "$13"
-
 
 
 

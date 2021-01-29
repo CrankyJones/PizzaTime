@@ -3,7 +3,7 @@ h2{
 }
 
 .radio {
-  padding: 5%;
+
 }
 .choiceHeading{
   margin-top: 5%;
@@ -11,4 +11,8 @@ h2{
 
 #placeOrder {
   margin-top: 5%;
+}
+
+.pizzaOrder {
+  display: none;
 }

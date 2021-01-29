@@ -9,7 +9,7 @@ Pizza.prototype.pizzaPrice = function () {
     price += 12;
   } else if (this.size === "Medium") {
     price += 14;
-  } else {
+  } else if (this.size === "Large") {
     price += 16;
   }
   let numToppings = this.toppings.length;
@@ -24,11 +24,23 @@ Pizza.prototype.pizzaPrice = function () {
 $(document).ready(function (){
   $("#pizzaForm").submit(function(event){
     event.preventDefault();
+    let toppings = [];
     const size = $("input:radio[name=size]:checked").val();
-    const toppings = 
-    newPizza = new Pizza();
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      const item = $(this).val();
+      toppings.push(item);
+    });
+    newPizza = new Pizza(size, toppings);
     let price = newPizza.pizzaPrice();
+    $(".pizzaSize").text(size);
+
+    for( let i=-1; i < toppings.length; i++) {
+      $(".pizzaToppings").text(toppings);
+    }
 
 
+    $(".pizzaCost").text(price);
+
+    $(".pizzaOrder").show();
   })
 })

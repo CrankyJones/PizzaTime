@@ -1,8 +1,28 @@
 
 
-function secondPizza () {
-  
-}
+function secondPizza() {
+    let toppings = [];
+    const size = $("input:radio[name=size]:checked").val();
+    $("input:checkbox[name=toppings]:checked").each(function () {
+      const item = $(this).val();
+      toppings.push(item);
+    });
+    newPizza = new Pizza(size, toppings);
+    newOrder.addPizza(newPizza);
+    newPizza.pizzaPrice();
+    $(".pizzaSize").text(size);
+      if (toppings.length === 0) {
+        $(".pizzaToppings").append("<li>Nothing</li>");
+      } else {
+        for (let i = 0; i < toppings.length; i++) {
+          $(".pizzaToppings").append("<li>" + toppings[i]) + "</li>";
+        }
+      };
+      $(".pizzaCost").text((Math.round(newOrder.totalPrice * 100) / 100).toFixed(2));
+      $(".pizzaOrder").show();
+      $("#placeOrder").hide();
+      document.getElementById("pizzaForm").reset();
+  };
 
 
 function Order() {
@@ -10,12 +30,12 @@ function Order() {
   this.totalPrice = 0;
   this.currentId = 0;
 }
-Order.prototype.assignId = function() {
+Order.prototype.assignId = function () {
   this.currentId += 1;
   return this.currentId;
 }
 
-Order.prototype.addPizza = function(pizza) {
+Order.prototype.addPizza = function (pizza) {
   pizza.id = this.assignId();
   this.pizzas[pizza.id] = pizza;
 }
@@ -25,22 +45,21 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 Pizza.prototype.pizzaPrice = function () {
-  for (currentID in newOrder.pizzas) {
-  let price = 0;
-  if (this.size === "Small") {
-    price += 12;
-  } else if (this.size === "Medium") {
-    price += 14;
-  } else if (this.size === "Large") {
-    price += 16;
+    let price = 0;
+    if (this.size === "Small") {
+      price += 12;
+    } else if (this.size === "Medium") {
+      price += 14;
+    } else if (this.size === "Large") {
+      price += 16;
+    }
+    let numToppings = this.toppings.length;
+    let toppingsPrice = numToppings * .50;
+    price += toppingsPrice;
+    newOrder.totalPrice += price;
   }
-  let numToppings = this.toppings.length;
-  let toppingsPrice = numToppings * .50;
-  price += toppingsPrice;
-  newOrder.totalPrice += price;
-  }
-}
-newOrder= new Order();
+
+newOrder = new Order();
 $(document).ready(function () {
   $("#pizzaForm").submit(function (event) {
     event.preventDefault();
@@ -52,18 +71,19 @@ $(document).ready(function () {
     });
     newPizza = new Pizza(size, toppings);
     newOrder.addPizza(newPizza);
-    let price = newPizza.pizzaPrice();
+    newPizza.pizzaPrice();
     $(".pizzaSize").text(size);
-    if (toppings.length === 0) {
-      $(".pizzaToppings").append("<li>Nothing</li>");
-    } else {
-      for (let i = 0; i < toppings.length; i++) {
-        $(".pizzaToppings").append("<li>" + toppings[i]) + "</li>";
-      }
-    };
-    $(".pizzaCost").text((Math.round(newOrder.totalPrice * 100) / 100).toFixed(2));
-    $(".pizzaOrder").show();
-    $("#placeOrder").hide();
-    document.getElementById("pizzaForm").reset();
+    // for (pizzas in newOrder) {
+      if (toppings.length === 0) {
+        $(".pizzaToppings").append("<li>Nothing</li>");
+      } else {
+        for (let i = 0; i < toppings.length; i++) {
+          $(".pizzaToppings").append("<li>" + toppings[i]) + "</li>";
+        }
+      };
+      $(".pizzaCost").text((Math.round(newOrder.totalPrice * 100) / 100).toFixed(2));
+      $(".pizzaOrder").show();
+      $("#placeOrder").hide();
+      document.getElementById("pizzaForm").reset();
   });
-})
+});

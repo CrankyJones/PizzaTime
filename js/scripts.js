@@ -18,12 +18,6 @@ Pizza.prototype.pizzaPrice = function () {
   return price;
 }
 
-function listToppings() {
-
-}
-
-
-
 $(document).ready(function (){
   $("#pizzaForm").submit(function(event){
     event.preventDefault();
@@ -37,14 +31,11 @@ $(document).ready(function (){
     newPizza = new Pizza(size, toppings);
     let price = newPizza.pizzaPrice();
     $(".pizzaSize").text(size);
-
     for( let i=0; i < toppings.length; i++) {
-      toppingsList += toppings[i] + "   ";
+      $(".pizzaToppings").append("<li>" + toppings[i]) + "</li>";
     }
-    $(".pizzaToppings").text(toppingsList);
-
     $(".pizzaCost").text(price);
-
     $(".pizzaOrder").show();
+    $("#placeOrder").hide();
   })
 })

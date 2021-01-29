@@ -1,14 +1,23 @@
 body{
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-background-image: url("/img/cutepizza.png");
-background-position: right bottom;
-background-repeat: no-repeat;
-background-color: lightcoral;
-font-size: large;
- ;
+background-image:
+url("/img/cutepizza.png"),
+linear-gradient(45deg, orangered 25%, transparent 25%), 
+linear-gradient(-45deg, orangered 25%, transparent 25%),
+linear-gradient(45deg, transparent 75%,orangered 75%),
+linear-gradient(-45deg, transparent 75%, orangered 75%);
+background-repeat: no-repeat;    
+background-position: fixed bottom right;
 }
 .jumbotron{
   background-color: lightcyan;
+}
+
+#pizzaForm {
+  background-color: lightcyan;
+  border-radius: 10%;
+  
+  padding: 5%;
 }
 
 h2{
@@ -29,7 +38,7 @@ h6{
 }
 
 .radio{
-
+  
 }
 
 #placeOrder {
@@ -44,6 +53,7 @@ h6{
   padding: 10%;
   display: none;
   margin-top: 15%;
+  color: black;
   background-color: rgb(211, 211, 211, .95);
   ;
 }

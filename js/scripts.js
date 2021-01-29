@@ -34,7 +34,8 @@ $(document).ready(function (){
     for( let i=0; i < toppings.length; i++) {
       $(".pizzaToppings").append("<li>" + toppings[i]) + "</li>";
     }
-    $(".pizzaCost").text(price);
+    
+    $(".pizzaCost").text((Math.round(price * 100) / 100).toFixed(2));
     $(".pizzaOrder").show();
     $("#placeOrder").hide();
   })

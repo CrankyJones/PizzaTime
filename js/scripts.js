@@ -18,12 +18,12 @@ Pizza.prototype.pizzaPrice = function () {
   return price;
 }
 
-$(document).ready(function (){
-  $("#pizzaForm").submit(function(event){
+$(document).ready(function () {
+  $("#pizzaForm").submit(function (event) {
     event.preventDefault();
     let toppings = [];
     const size = $("input:radio[name=size]:checked").val();
-    $("input:checkbox[name=toppings]:checked").each(function(){
+    $("input:checkbox[name=toppings]:checked").each(function () {
       const item = $(this).val();
       toppings.push(item);
     });
@@ -33,7 +33,7 @@ $(document).ready(function (){
     if (toppings.length === 0) {
       $(".pizzaToppings").append("<li>Nothing</li>");
     } else {
-      for(let i=0; i < toppings.length; i++) {
+      for (let i = 0; i < toppings.length; i++) {
         $(".pizzaToppings").append("<li>" + toppings[i]) + "</li>";
       }
     };

@@ -1,49 +1,44 @@
-# *Pizza Time
-by Geof Rosenmund
+# *Pizza Time*
+by Geof Rosenmund   
 A demonstration of JavaScript and JQuery with styling using Bootstrap with CSS.
 
-### **Technologies Used**
+## **Technologies Used**
 * HTML
 * JavaScript
 * JQuery
 * CSS
 * Bootstrap
 
-### **Description**
+## **Description**
 
+This is a simple webpage that takes a size and toppings array and creates a Pizza object. It then uses a prototype function to evaluate the contents of the object and spit out a price. It then displays the size, toppings, and price of the pizza ordered.
 
+## **Testing**
 
-### **Testing**
+### **Test 1**
+Describe: Pizza();   
+Test: A construoort for creating a pizza object   
+Expect: Pizza().toEqual Pizza{size, [toppings]}   
 
-Test 1
-Describe: Pizza();
-Test: A construoort for creating a pizza object
-Expect: Pizza().toEqual Pizza{size, [toppings]}
+### **Test 2**
+Describe: Pizza.prototype.pizzaPrice();   
+Test: Determine price of pizza by checking size and toppings.length   
+Expect pizzaPrice(small, [Pepperoni, Olives]).toEqual "13"   
 
-
-Test 2
-Describe: Pizza.prototype.pizzaPrice();
-Test: Determine price of pizza by checking size and toppings.length
-Expect pizzaPrice(small, [Pepperoni, Olives]).toEqual "$13"
-
-
-
-
-
-### **Setup/Installation**
+## **Setup/Installation**
 * Clone the repository to your desktop from GitHub
 * Navigate to the top level of the directory
 * Open the index.html file in a browser
 
-### **GitHub Link**
+## **GitHub Link**
 Repository: https://github.com/CrankyJones/PizzaTime
 
-### **Known Bugs**
+## **Known Bugs**
 There are no known bugs at this time.
 
-### **License**
+## **License**
 [MIT](https://opensource.org/licenses/MIT)
 Copyright (c) [2021] [Geof Rosenmund]
 
-### **Contact Information**
+## **Contact Information**
 Geof Rosenmund (geof.rosenmunds.email@gmail.com)

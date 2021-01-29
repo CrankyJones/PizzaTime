@@ -8,10 +8,13 @@
   <script src="js/scripts.js"></script>
   <title>Pizza Time</title>
 </head>
+
 <body>
   <div class="container">
     <h2>Welcome to PizzaPopolis!</h2>
     <h5>Where the pizza's hot, and the drinks are bottomless! (Dine-in only)</h5>
+    <h6>Dine-in currently unavailable. Pick-up only. Masks and social distancing required.</h6>
+    <h6>Thank you for your cooperation and thinking of PizzaPopolis for your pizza needs!</h6>
     <div class="row">
       <div class="col-md-6">
         <form id="pizzaForm">
@@ -20,36 +23,38 @@
             <label>
               <input type="radio" name="size" value="Small" checked>
               Small - $12
-            </label>
+            </label><br>
             <label>
               <input type="radio" name="size" value="Medium">
               Medium - $14
-            </label>
+            </label><br>
             <label>
               <input type="radio" name="size" value="Large">
               Large - $16
             </label>
           </div>
           <h4 class="choiceHeading">Toppings ($.50 each): </h4>
-          <input type="checkbox" name="toppings" value="Pepperoni">  Pepperoni<br>
-          <input type="checkbox" name="toppings" value="Sausage">  Sausage<br>
-          <input type="checkbox" name="toppings" value="Ham">  Ham<br>
-          <input type="checkbox" name="toppings" value="Mushrooms">  Mushrooms<br>
-          <input type="checkbox" name="toppings" value="Jalapeno">  Jalapeno<br>
-          <input type="checkbox" name="toppings" value="Green Pepper">  Green Pepper<br>
-          <input type="checkbox" name="toppings" value="Black Olives">  Black Olives<br>
-          <input type="checkbox" name="toppings" value="Onions">  Onions<br>
-          <input type="checkbox" name="toppings" value="Extra Cheese">  Extra Cheese<br>
-          <input type="checkbox" name="toppings" value="Extra Sauce">  Extra Sauce<br>
-          <button id="placeOrder" type="submit" class="btn btn-primary">  Get Pizza!</button>
+          <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni<br>
+          <input type="checkbox" name="toppings" value="Sausage"> Sausage<br>
+          <input type="checkbox" name="toppings" value="Ham"> Ham<br>
+          <input type="checkbox" name="toppings" value="Mushrooms"> Mushrooms<br>
+          <input type="checkbox" name="toppings" value="Jalapeno"> Jalapeno<br>
+          <input type="checkbox" name="toppings" value="Green Pepper"> Green Pepper<br>
+          <input type="checkbox" name="toppings" value="Black Olives"> Black Olives<br>
+          <input type="checkbox" name="toppings" value="Onions"> Onions<br>
+          <input type="checkbox" name="toppings" value="Extra Cheese"> Extra Cheese<br>
+          <input type="checkbox" name="toppings" value="Extra Sauce"> Extra Sauce<br>
+          <button id="placeOrder" type="submit" class="btn btn-primary">Get Pizza!</button>
         </form>
       </div>
       <div class="col-md-6">
         <div class="pizzaOrder">
-          <h3>You've ordered a <span class="pizzaSize"></span> topped with:<span class="pizzaToppings"></span> <br>$<span class="pizzaCost"></span> due at pick up.</h2>
+          <h3>You've ordered a <span class="pizzaSize"></span> topped with: <span class="pizzaToppings"></span>
+            <br>$<span class="pizzaCost"></span> due at pick up.</h2>
         </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>

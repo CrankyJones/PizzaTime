@@ -1,16 +1,31 @@
+body{
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 h2{
   margin-top: 5%;
+  font-style: bolder;
 }
 
-.radio {
+h5{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h6{
+  font-style: italic;
 
 }
+
 .choiceHeading{
   margin-top: 5%;
+  
 }
 
+.radio{
+font-family: cursive;
+}
 #placeOrder {
-  margin-top: 15%;
+  margin-top: 5%;
 }
 
 .pizzaOrder {

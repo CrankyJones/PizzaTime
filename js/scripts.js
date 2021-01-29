@@ -1,13 +1,25 @@
+
+function Order() {
+  this.pizzas = {};
+  this.totalPrice = 0;
+  this.currentId = 0;
+}
+Order.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
+}
+
+Order.prototype.addPizza = function(pizza) {
+  pizza.id = this.assignId();
+  this.pizzas[pizza.id] = pizza;
+}
+
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
 }
-
-function Order(){
-  this.pizzas = [];
-}
-
 Pizza.prototype.pizzaPrice = function () {
+  for (currentID in newOrder.pizzas) {
   let price = 0;
   if (this.size === "Small") {
     price += 12;
@@ -19,9 +31,10 @@ Pizza.prototype.pizzaPrice = function () {
   let numToppings = this.toppings.length;
   let toppingsPrice = numToppings * .50;
   price += toppingsPrice;
-  return price;
+  newOrder.totalPrice += price;
+  }
 }
-
+newOrder= new Order();
 $(document).ready(function () {
   $("#pizzaForm").submit(function (event) {
     event.preventDefault();
@@ -32,6 +45,7 @@ $(document).ready(function () {
       toppings.push(item);
     });
     newPizza = new Pizza(size, toppings);
+    newOrder.addPizza(newPizza);
     let price = newPizza.pizzaPrice();
     $(".pizzaSize").text(size);
     if (toppings.length === 0) {
@@ -41,8 +55,8 @@ $(document).ready(function () {
         $(".pizzaToppings").append("<li>" + toppings[i]) + "</li>";
       }
     };
-    $(".pizzaCost").text((Math.round(price * 100) / 100).toFixed(2));
+    $(".pizzaCost").text((Math.round(newOrder.totalPrice * 100) / 100).toFixed(2));
     $(".pizzaOrder").show();
     $("#placeOrder").hide();
   });
-});
+})

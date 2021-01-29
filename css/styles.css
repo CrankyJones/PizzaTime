@@ -14,5 +14,12 @@ h2{
 }
 
 .pizzaOrder {
+  float: right;
+  border: 5px dashed darkgreen;
+  width: auto;
+  height: auto;
+  padding: 10%;
   display: none;
+  margin-top: 15%;
+  background-color: lightgrey;
 }

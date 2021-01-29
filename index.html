@@ -14,9 +14,32 @@
     <div class="row">
       <div class="col-md-6">
         <form id="pizzaForm">
-          
-
-
+          <h4 class="choiceHeading">Size: </h4>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="Small" checked>
+              Small
+            </label>
+            <label>
+              <input type="radio" name="size" value="Medium" checked>
+              Medium
+            </label>
+            <label>
+              <input type="radio" name="size" value="Large" checked>
+              Large
+            </label>
+          </div>
+          <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
+          <input type="checkbox" name="toppings" value="Sausage">Sausage<br>
+          <input type="checkbox" name="toppings" value="Ham">Ham<br>
+          <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
+          <input type="checkbox" name="toppings" value="Jalapeno">Jalapeno<br>
+          <input type="checkbox" name="toppings" value="Green Pepper">Green Pepper<br>
+          <input type="checkbox" name="toppings" value="Black Olives">Black Olives<br>
+          <input type="checkbox" name="toppings" value="Onions">Onions<br>
+          <input type="checkbox" name="toppings" value="Extra Cheese">Extra Cheese<br>
+          <input type="checkbox" name="toppings" value="Extra Sauce">Extra Sauce<br>
+          <button id="placeOrder" type="submit" class="btn btn-primary">Get Pizza!</button>
         </form>
       </div>
     </div>

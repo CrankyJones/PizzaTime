@@ -17,3 +17,18 @@ Pizza.prototype.pizzaPrice = function () {
   price += toppingsPrice;
   return price;
 }
+
+
+
+
+$(document).ready(function (){
+  $("#pizzaForm").submit(function(event){
+    event.preventDefault();
+    const size = $("input:radio[name=size]:checked").val();
+    const toppings = 
+    newPizza = new Pizza();
+    let price = newPizza.pizzaPrice();
+
+
+  })
+})

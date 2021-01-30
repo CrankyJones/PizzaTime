@@ -1,6 +1,7 @@
 //Business Logic
 
 function Order() {
+  this .name = "";
   this.pizzas = {};
   this.totalPrice = 0;
   this.currentId = 0;
@@ -60,6 +61,12 @@ Order.prototype.pizzaPizza = function () {
   $(".pizzaCost").text((Math.round(newOrder.totalPrice * 100) / 100).toFixed(2));
   $(".pizzaOrder").show();
   $("#placeOrder").hide();
+  if (newOrder.name === "") {
+    let name = $("#name").val();
+    newOrder.name = name.toUpperCase();}
+  $(".orderName").text("Order Name: " + newOrder.name);
+  $("#name").hide();
+  $(".nameHeading").hide();
   document.getElementById("pizzaForm").reset();
 };
 

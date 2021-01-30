@@ -21,6 +21,8 @@
     <div class="row">
       <div class="col-md-6">
         <form id="pizzaForm">
+          <h4 class="nameHeading">Enter a name for the order:</h4>
+          <input id="name" class="form-control" type="text" required="true">
           <h4 class="choiceHeading">Size: </h4>
           <div class="radio">
             <label>
@@ -53,6 +55,7 @@
       </div>
       <div class="col-md-6">
         <div class="pizzaOrder">
+          <h2 class="orderName"></h2>
           <h2><span class="pizzaToppings"></span>
             <br>$<span class="pizzaCost"></span> due at pick up.
           </h2>

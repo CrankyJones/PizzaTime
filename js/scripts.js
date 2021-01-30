@@ -34,7 +34,6 @@ Pizza.prototype.pizzaPrice = function () {
   price += toppingsPrice;
   newOrder.totalPrice += price;
 }
-
 newOrder = new Order();
 
 //UI Logic

@@ -10,13 +10,13 @@
 </head>
 
 <body>
-  
+
   <div class="container">
     <div class="jumbotron">
-    <h2>Welcome to PizzaPopolis!</h2>
-    <h5>Where the pizza's hot, and the drinks are bottomless! <br> (Dine-in only)</h5>
-    <h6>Dine-in currently unavailable. Pick-up only. Masks and social distancing required.</h6>
-    <h6>Thank you for your cooperation and thinking of PizzaPopolis for your pizza needs!</h6>
+      <h2>Welcome to PizzaPopolis!</h2>
+      <h5>Where the pizza's hot, and the drinks are bottomless! <br> (Dine-in only)</h5>
+      <h6>Dine-in currently unavailable. Pick-up only. Masks and social distancing required.</h6>
+      <h6>Thank you for your cooperation and thinking of PizzaPopolis for your pizza needs!</h6>
     </div>
     <div class="row">
       <div class="col-md-6">
@@ -47,13 +47,16 @@
           <input type="checkbox" name="toppings" value="Onions"> Onions<br>
           <input type="checkbox" name="toppings" value="Extra Cheese"> Extra Cheese<br>
           <input type="checkbox" name="toppings" value="Extra Sauce"> Extra Sauce<br>
-          <button id="placeOrder" type="submit" class="btn btn-primary">Get Pizza!</button>
+ <!--     <button id="placeOrder" type="submit" class="btn btn-primary">Get Pizza!</button> -->
+      <button onclick="newOrder.pizzaPizza()" id="placeOrder" type="submit" class="btn btn-primary">Get Pizza!</button>
         </form>
       </div>
       <div class="col-md-6">
         <div class="pizzaOrder">
-          <h3>You've ordered a <span class="pizzaSize"></span> topped with: <span class="pizzaToppings"></span>
-            <br>$<span class="pizzaCost"></span> due at pick up.</h2>
+          <h2><span class="pizzaToppings"></span>
+          <br>$<span class="pizzaCost"></span> due at pick up.</h2>
+          <button onclick= "newOrder.pizzaPizza()" id="morePizzas" type="submit" class="btn btn-primary">Another Pizza?</button>
+          <h4 class="morePizzaDescription"> Choose your options and click the button above to add another pizza to your order.</h4>
         </div>
       </div>
     </div>

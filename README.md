@@ -1,6 +1,6 @@
 # *Pizza Time*
 by Geof Rosenmund   
-A demonstration of JavaScript and JQuery with styling using Bootstrap with CSS.
+A demonstration of objects using constructors and properties.
 
 ## **Technologies Used**
 * HTML
@@ -17,7 +17,7 @@ This is a simple webpage that takes a size and toppings array and creates a Pizz
 
 ### **Test 1**
 Describe: Pizza();   
-Test: A construoort for creating a pizza object   
+Test: A constructor for creating a pizza object   
 Expect: Pizza().toEqual Pizza{size, [toppings]}   
 
 ### **Test 2**
@@ -26,14 +26,14 @@ Test: Determine price of pizza by checking size and toppings.length
 Expect pizzaPrice(small, [Pepperoni, Olives]).toEqual "13"
 
 ### **Test 3**
-Describe: Order();
-Test: Add multiple pizzas to one object
-Expect Order().toEqual Order{pizza1, pizza2}
+Describe: Order();   
+Test: Add multiple pizzas to one object   
+Expect Order().toEqual Order{pizza1, pizza2}   
 
 ### **Test 4**
-Describe: secondPizza();
-Test: Try and get the form to be resubmitted
-Expect secondPizza().to resubmit the filled out form and run the submit function again.
+Describe: pizzaPizza();   
+Test: Pull information additional times from the form creating more pizzas that can be priced and displayed   
+Expect pizzaPizza().toEqual newOrder.pizzas {{1:pizza, 2:pizza} Toppings: 2 arrays, currentId: 2} 
 
 ## **Setup/Installation**
 * Clone the repository to your desktop from GitHub

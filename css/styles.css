@@ -38,22 +38,32 @@ h6{
   margin-top: 5%;  
 }
 
-.radio{
-  
-}
-
 #placeOrder {
   margin-top: 5%;
 }
 
+#morePizzas{
+  margin-top: 5%;
+}
+
+.morePizzaDescription{
+  margin-top: 5%;
+}
+
+.btn{
+  color:black;
+  background-color: turquoise;
+  font-size: larger;
+}
 .pizzaOrder {
   float: right;
   border: 5px dashed darkgreen;
   width: auto;
   height: auto;
   padding: 10%;
+  padding-top: 5%;
   display: none;
-  margin-top: 15%;
+
   color: black;
   background-color: rgb(211, 211, 211, .95);
   margin-bottom: 50%;

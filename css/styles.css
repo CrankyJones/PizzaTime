@@ -1,7 +1,7 @@
 body{
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 background-image:
-url("/img/cutepizza.png"),
+url("../img/cutepizza.png"),
 linear-gradient(45deg, orangered 25%, transparent 25%), 
 linear-gradient(-45deg, orangered 25%, transparent 25%),
 linear-gradient(45deg, transparent 75%,orangered 75%),

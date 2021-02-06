@@ -1,7 +1,7 @@
 //Business Logic
 
 function Order() {
-  this .name = "";
+  this.name = "";
   this.pizzas = {};
   this.totalPrice = 0;
   this.currentId = 0;
@@ -35,11 +35,11 @@ Pizza.prototype.pizzaPrice = function () {
   price += toppingsPrice;
   newOrder.totalPrice += price;
 }
-newOrder = new Order();
+
 
 //UI Logic
 
-Order.prototype.pizzaPizza = function () {
+pizzaPizza = function () {
   let toppings = [];
   const size = $("input:radio[name=size]:checked").val();
   $("input:checkbox[name=toppings]:checked").each(function () {
@@ -63,7 +63,8 @@ Order.prototype.pizzaPizza = function () {
   $("#placeOrder").hide();
   if (newOrder.name === "") {
     let name = $("#name").val();
-    newOrder.name = name.toUpperCase();}
+    newOrder.name = name.toUpperCase();
+  }
   $(".orderName").text("Order Name: " + newOrder.name);
   $("#name").hide();
   $(".nameHeading").hide();
@@ -71,7 +72,9 @@ Order.prototype.pizzaPizza = function () {
 };
 
 $(document).ready(function () {
+  newOrder = new Order();
   $("#pizzaForm").submit(function (event) {
     event.preventDefault();
+    pizzaPizza(newOrder);
   });
 });

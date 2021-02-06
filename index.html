@@ -49,7 +49,7 @@
           <input type="checkbox" name="toppings" value="Onions"> Onions<br>
           <input type="checkbox" name="toppings" value="Extra Cheese"> Extra Cheese<br>
           <input type="checkbox" name="toppings" value="Extra Sauce"> Extra Sauce<br>
-          <button onclick="newOrder.pizzaPizza()" id="placeOrder" type="submit" class="btn btn-primary">Get
+          <button id="placeOrder" type="submit" class="btn btn-primary">Get
             Pizza!</button>
         </form>
       </div>
@@ -59,7 +59,7 @@
           <h2><span class="pizzaToppings"></span>
             <br>$<span class="pizzaCost"></span> due at pick up.
           </h2>
-          <button onclick="newOrder.pizzaPizza()" id="morePizzas" type="submit" class="btn btn-primary">Another
+          <button id="morePizzas" onclick="pizzaPizza(newOrder)" class="btn btn-primary">Another
             Pizza?</button>
           <h4 class="morePizzaDescription"> Choose your options and click the button above to add another pizza to your
             order.</h4>
